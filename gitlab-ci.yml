@@ -1,0 +1,18 @@
+
+stages:
+- build
+- test
+
+build-code-job:
+    stage: build
+    script:
+        - echo "Comproba el funcionament del versió del main, es compila i executa:"
+        - main
+        - rake
+    
+test-code-job1:
+    stage: test
+    script: 
+        - echo "Si el programa compila correctament, testeja el seu funcionament:"
+        
+        - rake test
